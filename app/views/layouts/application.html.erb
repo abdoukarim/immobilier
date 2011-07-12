@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--Cette page est en HTML5 !! -->
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <!-- redirection de notre CSS-->
+    <%= render 'layouts/stylesheets'%>
+  </head>
+  <body>
+    <!--[Div pour Le contenu de la page il ne faut pas modifier le mot cle "Container" 
+    qui est indispensable pour le framework CSS 'Blueprint', voir le "README" du Blueprint
+    pour plus d'informations]-->
+    <div class="container">
+      <!-- redirection de notre code HTML pour la balise header -->
+      <%= render 'layouts/header'%>
+      <section class="round">
+        <%= yield %>
+      </section>
+      <!-- redirection de notre code HTML pour la balise 'footer' pour le pied de page -->
+      <%= render 'layouts/footer'%>
+    </div>
+  </body>
+</html>
